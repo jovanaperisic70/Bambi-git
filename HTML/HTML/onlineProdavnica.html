@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/styleOnlineProdavnica.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js" type="text/javascript"></script>
+   </head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" src="Slike/bambi-logo.jpg" alt="Slika nije učitana">
+            <h1>Bambi</h1>
+        </div>
+        <div id="meni">
+            <ul>
+                <li><a href="naslovna.html">Naslovna</a></li>
+                <li><a href="brendovi.html">Brendovi</a></li>
+                <li><a href="onlineProdavnica.html">Online prodavnica</a></li>
+                <li><a href="kontakt.html">Kontakti</a></li>
+            </ul>
+        </div>
+        <div id="telo">
+            <h3>Prijava</h3>
+            <h2 id="datumjs"></h2>
+            <div id="forma">
+                <form  method="post" name="form" id="form" >
+                    <p class="form">Ime i prezime:</p>
+                    <input class="form1" type="text" name="ime" id="imePrezime" placeholder="Ime i Prezime">
+                    <p class="form">Adresa</p>
+                    <input class="form1" type="text" name="adresa" id="adresa" placeholder="Adresa">
+                    <p class="form">Pol: </p>
+                    <input type="checkbox" id="pol" name="pol" value="Muski">
+                    <label for="pol">Muski</label>
+                    <input type="checkbox" id="pol" name="pol" value="zenski">
+                    <label for="pol">Zenski</label>
+                    <p class="form">Email:</p>
+                    <input class="form1" type="text" name="email" id="email" placeholder="E-mail">
+                    <div id="emailError">
+                       <p>Molim vas ukucajte vas email!</p>
+                    </div>
+                    <p class="form">Lozinka:</p>
+                    <input class="form1" type="password" name="sifra" id="sifra" placeholder="Lozinka">
+                    <div id="passwordError">
+                       <p>Molim vas ukucajte vasu sifru!</p>
+                    </div>
+                    <p class="form">Broj telefona:</p>
+                    <input class="form1" type="text" id="broj" placeholder="Broj telefona">
+                    <br>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <div id="prodavnica">
+                <div id="naslov">
+                  <p class="tekst1">Ukupan iznos: 0,00 din.</p>
+                  <img class="korpa" src="Slike/korpa.jpg" alt="Greska">
+                    <h3 class="prodon">Online prodavnica</h3>
+                </div>
+                <div id="akcija">
+                   <h2 class="special">Specijalna ponuda</h2>
+                   <button onclick="myFunction()">IZNENADJENJE</button>
+                </div>
+                <h2>Plazma</h2>
+                <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">plazma 75grama</p>
+                        <img  class="slika" src="Slike/plazma75g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma 150grama</p>
+                        <img class="slika" src="Slike/plazma150g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma 300grama</p>
+                        <img class="slika" src="Slike/plazma300g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Plazma posna 150grama</p>
+                        <img class="slika" src="Slike/posnaplazma150g.png" alt="">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">   
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma 600g</p>
+                        <img class="slika" src="Slike/plazma600g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma Slana susam 140grama</p>
+                        <img class="slika" src="Slike/plazma-slana-susam-morska-so-140g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Plazma Slana maslina 140grama</p>
+                        <img class="slika" src="Slike/plazma-slana-masline-sir-140.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma mlevena 300grama</p>
+                        <img class="slika" src="Slike/plazma_mlevena_300g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma mlevena 800grama</p>
+                        <img class="slika" src="Slike/plazma_mlevena_800g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Plazma mlevena 2kg</p>
+                        <img class="slika" src="Slike/plazma_mlevena_2kg.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma mlevena posna 300grama</p>
+                        <img class="slika" src="Slike/plazma_mlevena_posna_300g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma plus Cokolada 135grama</p>
+                        <img class="slika" src="Slike/plazma-plus-cokolada-135g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Plazma plus cokolada 100grama</p>
+                        <img class="slika" src="Slike/plazma-plus-cokolada-100g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma plus Cappuccino 100grama</p>
+                        <img class="slika" src="Slike/plazma-plus-capuciono-100g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma plus lesnik 100grama</p>
+                        <img class="slika" src="Slike/plazma-plus-lesnik-100g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Plazma mini 35grama</p>
+                        <img class="slika" src="Slike/plazma_minimini_35g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma mini coko 50grama</p>
+                        <img class="slika" src="Slike/plazma_minimini_cokobanana_50g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma mini coko 170grama</p>
+                        <img class="slika" src="Slike/plazma_minimini_170g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Plazma mini 200grama</p>
+                        <img class="slika" src="Slike/plazma_minimini_200g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma mini coko i banana 50grama</p>
+                        <img class="slika" src="Slike/plazma_minimini_cokobanana_50g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma mini coko i banana 170grama</p>
+                        <img class="slika" src="Slike/plazma_minimini_cokobanana_170g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Plazma kids keksici 75grama</p>
+                        <img class="slika" src="Slike/plazma-keksici-za-decu-75g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma kids keksici polupreliveni mlecnom cokoladom 80grama</p>
+                        <img class="slika" src="Slike/plazma-keksici-za-decu-80g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Plazma kocka 135grama</p>
+                        <img class="slika" src="Slike/plazma_kocka_135g.png" alt="Greska">
+                        <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                </div>
+                <h2>Wellness</h2>
+                <div class="row">
+                  <div class="proiz">
+                     <p class="naziv">Wellness ovsene pahuljice 210grama</p>
+                     <img class="slika" src="Slike/wellness_ovsene_pahuljice.jpg" alt="Greska">
+                     <br>
+                     <input type="button" value="Dodaj u korpu">
+                  </div>
+                  <div class="proiz">
+                     <p class="naziv">Wellness suvo grozdje 210grama</p>
+                     <img class="slika" src="Slike/wellness_suvo_grozdje.jpg" alt="Greska">
+                     <br>
+                     <input type="button" value="Dodaj u korpu">
+                  </div>
+                  <div class="proiz">
+                     <p class="naziv">Wellness komadici cokolade 210grama</p>
+                     <img class="slika" src="Slike/wellness_komadici_crne_cokolade.jpg" alt="Greska">
+                     <br>
+                     <input type="button" value="Dodaj u korpu">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                      <p class="naziv">Wellness lesnik 210grama</p>
+                      <img class="slika" src="Slike/wellness_lesnik.jpg" alt="Greska">
+                     <br>
+                      <input type="button" value="Dodaj u korpu">
+                     </div>
+                     <div class="proiz">
+                       <p class="naziv">Wellness banana 210grama</p>
+                       <img class="slika" src="Slike/wellness_banana.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                     </div>
+                     <div class="proiz">
+                      <p class="naziv">Wellness kokos 210grama</p>
+                       <img class="slika" src="Slike/wellness_kokos.png" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Wellness limunana 210grama</p>
+                       <img class="slika" src="Slike/wellness_limunana.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Wellness crna cokolada i pomorandza 205grama</p>
+                       <img class="slika" src="Slike/wellness_crna_cokolada_i_pomorandza.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  <div class="proiz">
+                       <p class="naziv">Wellness kakao i malina 150grama</p>
+                       <img class="slika" src="Slike/wellness_kakao_i_malina.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Wellness kakao i kajsija 150grama</p>
+                       <img class="slika" src="Slike/wellness_kakao_i_kajsija.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Wellness kakao i lesnik 150grama</p>
+                       <img class="slika" src="Slike/wellness_mlecna_cokolada_i_lesnik-1.jpg" alt="Greska">
+                     <br>
+                      <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Wellness jogurt i crveno voce 150grama</p>
+                       <img class="slika" src="Slike/wellness-jogurt.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <h2>Bambi biskviti</h2>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Bambi kokos galete 160grama</p>
+                       <img class="slika" src="Slike/bambi_kokos_galete.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Bambi spekulaas 180grama</p>
+                       <img class="slika" src="Slike/bambi_spekulaas.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Bambi stanglice 750grama</p>
+                       <img class="slika" src="Slike/bambi_stanglice.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <h2>Josh!</h2>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Josh ribice i perece 380grama</p>
+                       <img class="slika" src="Slike/josh_mix_380g-1-1.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Josh ribice i trojka mix 380grama</p>
+                       <img class="slika" src="Slike/josh_mix_trojka_380g-1.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Josh sauronion i crispy ribice 380grama</p>
+                       <img class="slika" src="Slike/josh_mix_suronion_380g.jpg" alt="Greska">
+                     <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Josh susamkamon i crispy ribica 380grama</p>
+                       <img class="slika" src="Slike/josh_mix_susamkamon_300g.jpg" alt="Greska">
+                    <br>
+                    <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Josh perece 180grama</p>
+                       <img class="slika" src="Slike/josh_perece_180g-1-1.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Josh perece 90grama</p>
+                       <img class="slika" src="Slike/josh_perece_90g-1-1.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Josh ribice 180grama</p>
+                       <img class="slika" src="Slike/josh_ribice_180g-2.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Josh ribice 90grama</p>
+                       <img class="slika" src="Slike/josh_ribice_90g-2.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Josh ribice kjut bat ljut 70grama</p>
+                       <img class="slika" src="Slike/josh_ribice_kjut.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Josh ribica sirana 70grama</p>
+                       <img class="slika" src="Slike/josh_ribice_sirane.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Josh ribica dzastinke 70grama</p>
+                       <img class="slika" src="Slike/josh_ribice_justinke_70g.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Josh krekeri 140grama</p>
+                       <img class="slika" src="Slike/jos_krekeri_140g-1-1.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <h2>Zlatni pek</h2>
+                <div class="row">
+                  <div class="proiz">
+                     <p class="naziv">Zlatni pek 750grama</p>
+                     <img class="slika" src="Slike/zlatni_pek_750g.jpg" alt="Greska">
+                    <br>
+                     <input type="button" value="Dodaj u korpu">
+                  </div>
+                  <div class="proiz">
+                     <p class="naziv">Zlatni pek kakao 750grama</p>
+                     <img class="slika" src="Slike/zlatni_pek_750kakaog.jpg" alt="Greska">
+                    <br>
+                     <input type="button" value="Dodaj u korpu">
+                  </div>
+                  <div class="proiz">
+                     <p class="naziv">Zlatni pek 420grama</p>
+                     <img class="slika" src="Slike/zlatni_pek_420g.jpg" alt="Greska">
+                    <br>
+                     <input type="button" value="Dodaj u korpu">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Zlatni pek 250 grama</p>
+                       <img class="slika" src="Slike/zlatni_pek_250gr.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Zlatni pek kakako 250grama</p>
+                       <img class="slika" src="Slike/zlatni_pek_kakao_250g.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Zlatni pek jabuka i cimet 250grama</p>
+                       <img class="slika" src="Slike/zlatni-pek-jabuka-cimet-250.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="proiz">
+                        <p class="naziv">Zlatni pek 100grama</p>
+                        <img class="slika" src="Slike/zlatni_pek_100g-1.jpg" alt="Greska">
+                    <br>
+                        <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Zlatni pek preliveni 200grama</p>
+                       <img class="slika" src="Slike/zlatni_pek_preliveni_200g.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Zlatni pek mleveni 285grama</p>
+                       <img class="slika" src="Slike/zlatni_pek_mleveni_285g.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <h2>Napolitanke</h2>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Napolitanke mleko i lesnik 185grama</p>
+                       <img class="slika" src="Slike/BAMBI-NAPOLITANKE-NEPRELIVENI-MLEKO-LEŠNIK-185G.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                        <p class="naziv">Napolitanke cokolada 185grama</p>
+                        <img class="slika" src="Slike/BAMBI-NAPOLITANKE-NEPRELIVENI-ČOKOLADA-185G.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Napolitanke lesnik 185grama</p>
+                       <img class="slika" src="Slike/BAMBI-NAPOLITANKE-NEPRELIVENI-LEŠNIK-185G.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Napolitanke crna bela cokolada 185grama</p>
+                       <img class="slika" src="Slike/BAMBI-NAPOLITANKE-NEPRELIVENI-CRNA-BELA-ČOKOLADA-185G.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Napolitanke limun 185grama</p>
+                       <img class="slika" src="Slike/BAMBI-NAPOLITANKE-NEPRELIVENI-LIMUN-185G-1.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Napolitanke jagoda slag 185grama</p>
+                       <img class="slika" src="Slike/BAMBI-NAPOLITANKE-NEPRELIVENI-JAGODA-ŠLAG-185G.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="proiz">
+                       <p class="naziv">Napolitanke prelivene kakao 140grama</p>
+                       <img class="slika" src="Slike/BAMBI-NAPOLITANKE-PRELIVENE-KAKAO-140G-1.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                    <div class="proiz">
+                       <p class="naziv">Napolitanke prelivene malina 140grama</p>
+                       <img class="slika" src="Slike/BAMBI-NAPOLITANKE-PRELIVENE-MALINA-140G-1.png" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                     </div>
+                    <div class="proiz">
+                       <p class="naziv">Napolitanke prelivene kajsija 140grama</p>
+                       <img class="slika" src="Slike/napolitanke-kajsija.jpg" alt="Greska">
+                    <br>
+                       <input type="button" value="Dodaj u korpu">
+                    </div>
+                  </div>
+               </div>
+        </div>
+        <div id="foother">
+            <img class="logof" src="Slike/bambi-logo.jpg" alt="Slika nije ucitana">
+            <p class="tekst">Copyright 2019</p>
+
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+$('#form').validate({
+   rules: {
+       ime: {
+           required: true,
+           minlength: 3
+       },        
+       email: {
+               required: true,
+               email:true
+       },
+       sifra: {
+               required: true,
+               minlength: 5 		
+       }
+   },
+   messages: {
+       ime: {
+           required: "Unesite ime!",
+           minlength: "Ime mora imati minimalno 3 karaktera!"
+       },
+       email: {
+           required: "Unesite email!",
+           email: "E-mail mora biti validan!"
+       },
+       sifra: {
+           required: "Unesite lozinku!",
+           minlength: "Lozinka mora da ima minimalno 5 karaktera!"
+       }
+   }
+});
+</script>
+</html>
